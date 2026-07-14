@@ -1,0 +1,8 @@
+.wp-block-dark-palette-appearance-toggle .dark-palette-appearance-toggle__button {
+	cursor: default;
+}
+
+.wp-block-dark-palette-appearance-toggle .dark-palette-appearance-toggle__button:first-child {
+	background: var(--wp--preset--color--contrast, #111);
+	color: var(--wp--preset--color--base, #fff);
+}

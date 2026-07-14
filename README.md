@@ -2,86 +2,55 @@
 
 **Native dark mode for modern WordPress block themes.**
 
-Dark Palette lets you create a custom dark version of your theme's color palette.
+Dark Palette lets you create a custom dark version of your theme's colour palette.
 
-Instead of replacing stylesheets or inverting colors, it works with your theme's existing `theme.json` color palette. Simply define the dark counterpart for each color, and Dark Palette automatically switches between them whenever dark mode is active.
-
-The result is a lightweight, accessible and native dark mode experience that feels like part of WordPress itself.
+Instead of replacing stylesheets or inverting colours, it works with your theme's existing `theme.json` colour presets. Define the dark counterpart for each colour, and Dark Palette remaps those WordPress variables whenever dark mode is active.
 
 ## Features
 
-- 🎨 Create a custom dark palette for your theme
-- 🌗 Native Appearance Toggle block
-- ☀️ Light, 🌙 Dark and 💻 Auto modes
+- Create a custom dark palette for the active theme
+- See original colours beside their dark counterparts
+- Native Appearance Toggle block
+- Light, Dark and Auto modes
 - Respects visitors' system preference
 - Remembers the selected mode
-- No page reloads
-- No stylesheet swapping
-- No jQuery
+- Applies the correct mode before the page paints
 - Accessible and keyboard-friendly
-- Prevents Flash of Unstyled Content (FOUC)
+- No jQuery or stylesheet swapping
 
 ## Fine-grained control
 
-Disable dark mode where it doesn't make sense:
+Dark mode can be disabled for:
 
 - Individual posts and pages
-- Templates
+- Selected block templates
 - Archive pages
 - Search results
 - 404 pages
 - Password-protected content
-- WooCommerce Checkout
-- WordPress Login
+- WooCommerce checkout
+- WordPress login pages
 
-Choose what visitors should see instead:
-
-- Hide the toggle
-- Show an information message
-- Show a disabled toggle with an explanation
-
-Customize the message globally or individually for each page.
-
-## Why Dark Palette?
-
-Most WordPress dark mode plugins were created before Block Themes and `theme.json` became the standard.
-
-Dark Palette is built specifically for modern WordPress. Rather than replacing your site's design, it works with your existing color palette. You define the dark equivalent of each theme color once, and the plugin takes care of the rest.
-
-This approach keeps Dark Palette lightweight, predictable and easy to integrate into any modern block theme.
-
-## Built for modern WordPress
-
-Dark Palette was designed with Twenty Twenty-Five in mind and works especially well with themes built using `theme.json`.
-
-It should also work with other modern block themes that rely on WordPress' native color presets.
-
-## Roadmap
-
-Planned features include:
-
-- Automatic dark palette generation
-- Palette import and export
-- Ready-made palette presets
-- Additional Appearance Toggle styles
-- Developer API
-- More theme-specific optimizations
-
-Suggestions and contributions are always welcome!
+When dark mode is unavailable, Dark Palette can hide the toggle, show an information message, or display a disabled toggle with an explanation. The message can be configured globally or overridden for an individual post or page.
 
 ## Installation
 
-1. Upload the plugin to your `/wp-content/plugins/` directory or install it through the WordPress plugin installer.
-2. Activate **Dark Palette**.
-3. Insert the **Appearance Toggle** block wherever you want visitors to switch themes.
-4. Open **Appearance → Dark Palette** to configure your dark color palette.
+1. Download the release ZIP.
+2. In WordPress, open **Plugins → Add New → Upload Plugin**.
+3. Upload and activate Dark Palette.
+4. Open **Appearance → Dark Palette** and configure the palette.
+5. Add the **Appearance Toggle** block in the Site Editor.
+
+## Compatibility
+
+Dark Palette was designed with Twenty Twenty-Five in mind and is intended for modern block themes that use `theme.json` colour presets.
+
+Requires WordPress 6.7 or newer and PHP 7.4 or newer.
 
 ## Author
 
-Made with ❤️ by **Fabio Huwyler**
-
-🌐 https://fabiohuwyler.ch
+Made by [Fabio Huwyler](https://fabiohuwyler.ch).
 
 ## License
 
-GPL-2.0-or-later
+GPL-2.0-or-later.

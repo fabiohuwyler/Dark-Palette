@@ -1,0 +1,46 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "dark-palette/appearance-toggle",
+  "version": "1.0.0",
+  "title": "Appearance Toggle",
+  "category": "design",
+  "icon": "admin-appearance",
+  "description": "Let visitors choose Light, Dark or Auto appearance.",
+  "keywords": [
+    "dark mode",
+    "appearance",
+    "theme"
+  ],
+  "textdomain": "dark-palette",
+  "attributes": {
+    "showLabels": {
+      "type": "boolean",
+      "default": false
+    },
+    "showAuto": {
+      "type": "boolean",
+      "default": true
+    },
+    "label": {
+      "type": "string",
+      "default": "Appearance"
+    }
+  },
+  "supports": {
+    "html": false,
+    "align": [
+      "left",
+      "center",
+      "right"
+    ],
+    "spacing": {
+      "margin": true
+    }
+  },
+  "editorScript": "file:./index.js",
+  "script": "file:./view.js",
+  "style": "file:./style.css",
+  "editorStyle": "file:./editor.css",
+  "render": "file:./render.php"
+}
