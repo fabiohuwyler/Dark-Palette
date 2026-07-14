@@ -12,6 +12,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 $show_labels = ! empty( $attributes['showLabels'] );
 $show_auto   = ! array_key_exists( 'showAuto', $attributes ) || ! empty( $attributes['showAuto'] );
 $label       = isset( $attributes['label'] ) ? sanitize_text_field( $attributes['label'] ) : __( 'Appearance', 'dark-palette' );
+if ( 'Appearance' === $label ) {
+	$label = __( 'Appearance', 'dark-palette' );
+}
 
 $disabled = function_exists( 'dark_palette_is_disabled' ) && dark_palette_is_disabled();
 $disabled_ui = $disabled && function_exists( 'dark_palette_get_effective_disabled_ui' ) ? dark_palette_get_effective_disabled_ui() : array( 'behavior' => 'hide', 'message' => '' );

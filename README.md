@@ -33,6 +33,14 @@ Dark mode can be disabled for:
 
 When dark mode is unavailable, Dark Palette can hide the toggle, show an information message, or display a disabled toggle with an explanation. The message can be configured globally or overridden for an individual post or page.
 
+## Languages
+
+Dark Palette follows the WordPress installation language automatically. The plugin includes English, German, French, Italian and Spanish translations for the WordPress admin, block editor and default frontend message.
+
+## Live preview
+
+The settings screen includes a lightweight preview that updates as dark counterparts are changed. It is intended as a quick palette check; the actual site remains the final reference because block styles and layouts vary by theme.
+
 ## Installation
 
 1. Download the release ZIP.

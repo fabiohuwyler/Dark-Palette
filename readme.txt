@@ -4,7 +4,7 @@ Tags: dark mode, block themes, theme json, accessibility, color palette
 Requires at least: 6.7
 Tested up to: 6.9
 Requires PHP: 7.4
-Stable tag: 1.0.0
+Stable tag: 1.1.0
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -59,7 +59,19 @@ You can hide the Appearance Toggle, show a custom message, or display a disabled
 
 Dark Palette can keep the WooCommerce checkout in light mode when WooCommerce is active. It does not otherwise alter WooCommerce styles.
 
+== Languages ==
+
+Dark Palette follows the WordPress installation language automatically. Version 1.1.0 includes English, German, French, Italian and Spanish translations for the WordPress admin, block editor and default frontend message.
+
 == Changelog ==
+
+= 1.1.0 =
+* Add bundled English, German, French, Italian and Spanish support.
+* Add PHP gettext catalogues and JavaScript translation JSON files.
+* Translate the post editor sidebar, block controls and default unavailable message.
+* Add a lightweight live palette preview to the settings screen.
+* Keep the default unavailable message dynamic so it follows the current WordPress locale.
+
 
 = 1.0.0 =
 * Rename the plugin and all public/internal identifiers consistently to Dark Palette.

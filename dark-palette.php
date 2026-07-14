@@ -3,7 +3,7 @@
  * Plugin Name:       Dark Palette
  * Plugin URI:        https://github.com/fabiohuwyler/dark-palette
  * Description:       Native dark mode for modern WordPress block themes.
- * Version:           1.0.0
+ * Version:           1.1.0
  * Requires at least: 6.7
  * Requires PHP:      7.4
  * Author:            Fabio Huwyler
@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-const DARK_PALETTE_VERSION       = '1.0.0';
+const DARK_PALETTE_VERSION       = '1.1.0';
 const DARK_PALETTE_OPTION        = 'dark_palette_colors';
 const DARK_PALETTE_META          = '_dark_palette_disabled';
 const DARK_PALETTE_META_BEHAVIOR = '_dark_palette_disabled_behavior';
@@ -25,6 +25,13 @@ const DARK_PALETTE_META_MESSAGE  = '_dark_palette_disabled_message';
 const DARK_PALETTE_UI_OPTION     = 'dark_palette_disabled_ui';
 const DARK_PALETTE_SCOPE_OPTION  = 'dark_palette_disabled_scopes';
 
+
+
+/** Load bundled translations for PHP and block metadata. */
+function dark_palette_load_textdomain() {
+	load_plugin_textdomain( 'dark-palette', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+}
+add_action( 'init', 'dark_palette_load_textdomain', 0 );
 
 /** Migrate settings and post metadata from pre-1.0 TT5 Dark Mode builds. */
 function dark_palette_maybe_migrate_legacy_data() {
@@ -84,8 +91,12 @@ function dark_palette_default_colors() {
 function dark_palette_default_disabled_ui() {
 	return array(
 		'behavior' => 'message',
-		'message'  => __( 'Dark mode is not available on this page.', 'dark-palette' ),
+		'message'  => '',
 	);
+}
+
+function dark_palette_default_unavailable_message() {
+	return __( 'Dark mode is not available on this page.', 'dark-palette' );
 }
 
 function dark_palette_default_scopes() {
@@ -114,7 +125,11 @@ function dark_palette_get_colors() {
 
 function dark_palette_get_disabled_ui() {
 	$saved = get_option( DARK_PALETTE_UI_OPTION, array() );
-	return wp_parse_args( is_array( $saved ) ? $saved : array(), dark_palette_default_disabled_ui() );
+	$ui    = wp_parse_args( is_array( $saved ) ? $saved : array(), dark_palette_default_disabled_ui() );
+	if ( '' === trim( (string) $ui['message'] ) || 'Dark mode is not available on this page.' === $ui['message'] ) {
+		$ui['message'] = dark_palette_default_unavailable_message();
+	}
+	return $ui;
 }
 
 function dark_palette_get_scopes() {
@@ -151,6 +166,7 @@ function dark_palette_get_original_colors() {
 /** Register the block and per-entry editor settings. */
 function dark_palette_init() {
 	register_block_type( __DIR__ );
+	wp_set_script_translations( 'dark-palette-appearance-toggle-editor-script', 'dark-palette', __DIR__ . '/languages' );
 
 	$post_types = get_post_types( array( 'show_in_rest' => true ), 'names' );
 	foreach ( $post_types as $post_type ) {
@@ -300,6 +316,7 @@ add_action( 'wp_head', 'dark_palette_print_palette', 20 );
 function dark_palette_enqueue_editor_sidebar() {
 	$asset = include __DIR__ . '/post-editor.asset.php';
 	wp_enqueue_script( 'dark-palette-post-editor', plugins_url( 'post-editor.js', __FILE__ ), $asset['dependencies'], $asset['version'], true );
+	wp_set_script_translations( 'dark-palette-post-editor', 'dark-palette', __DIR__ . '/languages' );
 }
 add_action( 'enqueue_block_editor_assets', 'dark_palette_enqueue_editor_sidebar' );
 
@@ -334,7 +351,7 @@ function dark_palette_sanitize_disabled_ui( $value ) {
 	$value    = is_array( $value ) ? $value : array();
 	$behavior = isset( $value['behavior'] ) && in_array( $value['behavior'], array( 'hide', 'message', 'disabled' ), true ) ? $value['behavior'] : $defaults['behavior'];
 	$message  = isset( $value['message'] ) ? sanitize_textarea_field( $value['message'] ) : '';
-	return array( 'behavior' => $behavior, 'message' => $message ?: $defaults['message'] );
+	return array( 'behavior' => $behavior, 'message' => $message );
 }
 
 function dark_palette_sanitize_scopes( $value ) {
@@ -390,9 +407,19 @@ function dark_palette_render_settings_page() {
 	$disabled_ui     = dark_palette_get_disabled_ui();
 	$scopes          = dark_palette_get_scopes();
 	$template_choices = dark_palette_get_template_choices();
+	$known_labels = array(
+		'base'     => __( 'Base', 'dark-palette' ),
+		'contrast' => __( 'Contrast', 'dark-palette' ),
+		'accent-1' => __( 'Accent 1', 'dark-palette' ),
+		'accent-2' => __( 'Accent 2', 'dark-palette' ),
+		'accent-3' => __( 'Accent 3', 'dark-palette' ),
+		'accent-4' => __( 'Accent 4', 'dark-palette' ),
+		'accent-5' => __( 'Accent 5', 'dark-palette' ),
+		'accent-6' => __( 'Accent 6', 'dark-palette' ),
+	);
 	$labels = array();
 	foreach ( array_keys( $colors ) as $slug ) {
-		$labels[ $slug ] = ucwords( str_replace( '-', ' ', $slug ) );
+		$labels[ $slug ] = isset( $known_labels[ $slug ] ) ? $known_labels[ $slug ] : ucwords( str_replace( '-', ' ', $slug ) );
 	}
 	?>
 	<div class="wrap">
@@ -419,6 +446,23 @@ function dark_palette_render_settings_page() {
 				<?php endforeach; ?>
 				</tbody>
 			</table>
+
+			<h2><?php esc_html_e( 'Live preview', 'dark-palette' ); ?></h2>
+			<p><?php esc_html_e( 'Changes appear here immediately. Save the settings when you are happy with the palette.', 'dark-palette' ); ?></p>
+			<div id="dark-palette-live-preview" class="dark-palette-live-preview">
+				<div class="dark-palette-live-preview__card">
+					<p class="dark-palette-live-preview__eyebrow"><?php esc_html_e( 'Preview', 'dark-palette' ); ?></p>
+					<h3><?php esc_html_e( 'A page in dark mode', 'dark-palette' ); ?></h3>
+					<p><?php esc_html_e( 'This preview uses the dark counterparts currently selected above.', 'dark-palette' ); ?></p>
+					<p><a href="#"><?php esc_html_e( 'Example link', 'dark-palette' ); ?></a></p>
+					<button type="button"><?php esc_html_e( 'Example button', 'dark-palette' ); ?></button>
+					<div class="dark-palette-live-preview__accents" aria-label="<?php esc_attr_e( 'Accent colours', 'dark-palette' ); ?>">
+						<?php foreach ( array_keys( $colors ) as $slug ) : ?>
+							<span data-preview-colour="<?php echo esc_attr( $slug ); ?>" title="<?php echo esc_attr( $labels[ $slug ] ); ?>"></span>
+						<?php endforeach; ?>
+					</div>
+				</div>
+			</div>
 
 			<h2><?php esc_html_e( 'Unavailable-state display', 'dark-palette' ); ?></h2>
 			<table class="form-table" role="presentation"><tbody>
@@ -460,3 +504,44 @@ function dark_palette_render_settings_page() {
 	</div>
 	<?php
 }
+
+
+/** Add the lightweight palette preview to the Dark Palette settings screen. */
+function dark_palette_admin_preview_assets( $hook_suffix ) {
+	if ( 'appearance_page_dark-palette' !== $hook_suffix ) {
+		return;
+	}
+	?>
+	<style>
+	.dark-palette-live-preview{max-width:900px;padding:24px;border:1px solid #c3c4c7;border-radius:8px;background:#f0f0f1;box-sizing:border-box}
+	.dark-palette-live-preview__card{--dp-base:#111;--dp-contrast:#f7f7f7;--dp-accent-1:#ffef71;--dp-accent-2:#5b345a;padding:clamp(24px,5vw,56px);border-radius:8px;background:var(--dp-base);color:var(--dp-contrast);font-size:16px;line-height:1.55}
+	.dark-palette-live-preview__card h3{margin:.15em 0 .5em;color:inherit;font-size:clamp(26px,4vw,44px)}
+	.dark-palette-live-preview__card p{max-width:620px}
+	.dark-palette-live-preview__card a{color:var(--dp-accent-1)}
+	.dark-palette-live-preview__card button{padding:10px 18px;border:0;border-radius:999px;background:var(--dp-accent-1);color:var(--dp-base);font:inherit;font-weight:600}
+	.dark-palette-live-preview__eyebrow{margin:0;text-transform:uppercase;letter-spacing:.12em;font-size:12px;opacity:.75}
+	.dark-palette-live-preview__accents{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+	.dark-palette-live-preview__accents span{display:block;width:34px;height:34px;border:1px solid color-mix(in srgb,currentColor 25%,transparent);border-radius:50%;background:var(--dp-preview-colour)}
+	</style>
+	<script>
+	document.addEventListener('DOMContentLoaded',function(){
+		var preview=document.getElementById('dark-palette-live-preview');
+		if(!preview){return;}
+		var card=preview.querySelector('.dark-palette-live-preview__card');
+		document.querySelectorAll('.dark-palette-colors input[type="color"]').forEach(function(input){
+			var slug=input.id.replace('dark-palette-dark-','');
+			function update(){
+				card.style.setProperty('--dp-'+slug,input.value);
+				var swatch=preview.querySelector('[data-preview-colour="'+slug+'"]');
+				if(swatch){swatch.style.setProperty('--dp-preview-colour',input.value);}
+				var code=input.parentNode.querySelector('code');
+				if(code){code.textContent=input.value;}
+			}
+			input.addEventListener('input',update);
+			update();
+		});
+	});
+	</script>
+	<?php
+}
+add_action( 'admin_enqueue_scripts', 'dark_palette_admin_preview_assets' );

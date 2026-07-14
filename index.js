@@ -22,6 +22,7 @@
 		edit: function (props) {
 			var attributes = props.attributes;
 			var setAttributes = props.setAttributes;
+			var displayLabel = attributes.label === 'Appearance' ? __('Appearance', 'dark-palette') : attributes.label;
 			var options = [
 				{ value: 'light', label: __('Light', 'dark-palette') },
 				{ value: 'dark', label: __('Dark', 'dark-palette') }
@@ -47,7 +48,7 @@
 						}),
 						el(TextControl, {
 							label: __('Accessible group label', 'dark-palette'),
-							value: attributes.label,
+							value: displayLabel,
 							onChange: function (value) { setAttributes({ label: value }); }
 						})
 					)
@@ -56,7 +57,7 @@
 					className: 'dark-palette-appearance-toggle',
 					'data-show-labels': attributes.showLabels ? 'true' : 'false'
 				}),
-					el('span', { className: 'dark-palette-appearance-toggle__label' }, attributes.label),
+					el('span', { className: 'dark-palette-appearance-toggle__label' }, displayLabel),
 					el('div', { className: 'dark-palette-appearance-toggle__controls' },
 						options.map(function (option) {
 							return el('span', { className: 'dark-palette-appearance-toggle__button', key: option.value },
