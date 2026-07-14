@@ -1,0 +1,191 @@
+msgid ""
+msgstr "Project-Id-Version: Dark Palette 1.1.0\\nReport-Msgid-Bugs-To: https://github.com/fabiohuwyler/dark-palette/issues\\nPOT-Creation-Date: 2026-07-14 00:00+0000\\nPO-Revision-Date: 2026-07-14 00:00+0000\\nLanguage: it_IT\\nMIME-Version: 1.0\\nContent-Type: text/plain; charset=UTF-8\\nContent-Transfer-Encoding: 8bit\\nX-Domain: dark-palette\\n"
+
+msgid "404 pages"
+msgstr "Pagine 404"
+
+msgid "A page in dark mode"
+msgstr "Una pagina in modalità scura"
+
+msgid "Accent 1"
+msgstr "Accento 1"
+
+msgid "Accent 2"
+msgstr "Accento 2"
+
+msgid "Accent 3"
+msgstr "Accento 3"
+
+msgid "Accent 4"
+msgstr "Accento 4"
+
+msgid "Accent 5"
+msgstr "Accento 5"
+
+msgid "Accent 6"
+msgstr "Accento 6"
+
+msgid "Accent colours"
+msgstr "Colori di accento"
+
+msgid "Accessible group label"
+msgstr "Etichetta accessibile del gruppo"
+
+msgid "All archive pages"
+msgstr "Tutte le pagine archivio"
+
+msgid "Appearance"
+msgstr "Aspetto"
+
+msgid "Appearance Toggle"
+msgstr "Cambia aspetto"
+
+msgid "Attachment template"
+msgstr "Template allegato"
+
+msgid "Auto"
+msgstr "Auto"
+
+msgid "Base"
+msgstr "Base"
+
+msgid "Changes appear here immediately. Save the settings when you are happy with the palette."
+msgstr "Le modifiche appaiono qui immediatamente. Salva le impostazioni quando la palette ti soddisfa."
+
+msgid "Colour"
+msgstr "Colore"
+
+msgid "Colour counterparts"
+msgstr "Controparti dei colori"
+
+msgid "Contrast"
+msgstr "Contrasto"
+
+msgid "Custom message"
+msgstr "Messaggio personalizzato"
+
+msgid "Dark"
+msgstr "Scuro"
+
+msgid "Dark counterpart"
+msgstr "Controparte scura"
+
+msgid "Dark mode is not available on this page."
+msgstr "La modalità scura non è disponibile per questa pagina."
+
+msgid "Default Page template"
+msgstr "Template pagina predefinito"
+
+msgid "Default Single Post template"
+msgstr "Template articolo singolo predefinito"
+
+msgid "Default behaviour"
+msgstr "Comportamento predefinito"
+
+msgid "Default message"
+msgstr "Messaggio predefinito"
+
+msgid "Disable dark mode by context"
+msgstr "Disattiva la modalità scura per contesto"
+
+msgid "Disable dark mode for this entry"
+msgstr "Disattiva la modalità scura per questo contenuto"
+
+msgid "Display"
+msgstr "Visualizzazione"
+
+msgid "Example button"
+msgstr "Pulsante di esempio"
+
+msgid "Example link"
+msgstr "Link di esempio"
+
+msgid "Hide the toggle"
+msgstr "Nascondi il selettore"
+
+msgid "Include Auto option"
+msgstr "Includi l’opzione Auto"
+
+msgid "Leave empty to use the predefined global message."
+msgstr "Lascia vuoto per usare il messaggio globale predefinito."
+
+msgid "Let visitors choose Light, Dark or Auto appearance."
+msgstr "Consente ai visitatori di scegliere l’aspetto Chiaro, Scuro o Auto."
+
+msgid "Light"
+msgstr "Chiaro"
+
+msgid "Live preview"
+msgstr "Anteprima dal vivo"
+
+msgid "Not found"
+msgstr "Non trovato"
+
+msgid "Original colour"
+msgstr "Colore originale"
+
+msgid "Password-protected posts and pages"
+msgstr "Articoli e pagine protetti da password"
+
+msgid "Preview"
+msgstr "Anteprima"
+
+msgid "Search results"
+msgstr "Risultati di ricerca"
+
+msgid "Select templates whose singular pages should always remain in light mode."
+msgstr "Seleziona i template le cui pagine singole devono rimanere sempre in modalità chiara."
+
+msgid "Show a disabled toggle and message"
+msgstr "Mostra un selettore disabilitato e un messaggio"
+
+msgid "Show an information message"
+msgstr "Mostra un messaggio informativo"
+
+msgid "Show text labels"
+msgstr "Mostra etichette di testo"
+
+msgid "Templates"
+msgstr "Template"
+
+msgid "The original theme colour is shown beside the colour that replaces it in dark mode."
+msgstr "Il colore originale del tema viene mostrato accanto al colore che lo sostituisce in modalità scura."
+
+msgid "These contexts are forced to light mode and use the unavailable-state display chosen above."
+msgstr "Questi contesti vengono forzati in modalità chiara e usano la visualizzazione di indisponibilità scelta sopra."
+
+msgid "This entry will always use the light appearance."
+msgstr "Questo contenuto userà sempre l’aspetto chiaro."
+
+msgid "This preview uses the dark counterparts currently selected above."
+msgstr "Questa anteprima usa le controparti scure attualmente selezionate sopra."
+
+msgid "Unavailable-state display"
+msgstr "Visualizzazione quando non disponibile"
+
+msgid "Use global default"
+msgstr "Usa impostazione globale"
+
+msgid "Used unless an individual post or page supplies its own text."
+msgstr "Usato a meno che un singolo articolo o pagina non fornisca un testo proprio."
+
+msgid "Visitors may use Light, Dark or Auto on this entry."
+msgstr "I visitatori possono usare Chiaro, Scuro o Auto per questo contenuto."
+
+msgid "When dark mode is unavailable"
+msgstr "Quando la modalità scura non è disponibile"
+
+msgid "WooCommerce checkout"
+msgstr "Checkout WooCommerce"
+
+msgid "WordPress login pages"
+msgstr "Pagine di accesso WordPress"
+
+msgid "appearance"
+msgstr "aspetto"
+
+msgid "dark mode"
+msgstr "modalità scura"
+
+msgid "theme"
+msgstr "tema"

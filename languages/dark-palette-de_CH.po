@@ -1,0 +1,191 @@
+msgid ""
+msgstr "Project-Id-Version: Dark Palette 1.1.0\\nReport-Msgid-Bugs-To: https://github.com/fabiohuwyler/dark-palette/issues\\nPOT-Creation-Date: 2026-07-14 00:00+0000\\nPO-Revision-Date: 2026-07-14 00:00+0000\\nLanguage: de_CH\\nMIME-Version: 1.0\\nContent-Type: text/plain; charset=UTF-8\\nContent-Transfer-Encoding: 8bit\\nX-Domain: dark-palette\\n"
+
+msgid "404 pages"
+msgstr "404-Seiten"
+
+msgid "A page in dark mode"
+msgstr "Eine Seite im Dunkelmodus"
+
+msgid "Accent 1"
+msgstr "Akzent 1"
+
+msgid "Accent 2"
+msgstr "Akzent 2"
+
+msgid "Accent 3"
+msgstr "Akzent 3"
+
+msgid "Accent 4"
+msgstr "Akzent 4"
+
+msgid "Accent 5"
+msgstr "Akzent 5"
+
+msgid "Accent 6"
+msgstr "Akzent 6"
+
+msgid "Accent colours"
+msgstr "Akzentfarben"
+
+msgid "Accessible group label"
+msgstr "Barrierefreie Gruppenbezeichnung"
+
+msgid "All archive pages"
+msgstr "Alle Archivseiten"
+
+msgid "Appearance"
+msgstr "Darstellung"
+
+msgid "Appearance Toggle"
+msgstr "Darstellung umschalten"
+
+msgid "Attachment template"
+msgstr "Anhang-Template"
+
+msgid "Auto"
+msgstr "Automatisch"
+
+msgid "Base"
+msgstr "Basis"
+
+msgid "Changes appear here immediately. Save the settings when you are happy with the palette."
+msgstr "Änderungen werden hier sofort angezeigt. Speichere die Einstellungen, wenn du mit der Palette zufrieden bist."
+
+msgid "Colour"
+msgstr "Farbe"
+
+msgid "Colour counterparts"
+msgstr "Farbgegenstücke"
+
+msgid "Contrast"
+msgstr "Kontrast"
+
+msgid "Custom message"
+msgstr "Individuelle Nachricht"
+
+msgid "Dark"
+msgstr "Dunkel"
+
+msgid "Dark counterpart"
+msgstr "Dunkles Gegenstück"
+
+msgid "Dark mode is not available on this page."
+msgstr "Der Dunkelmodus ist auf dieser Seite nicht verfügbar."
+
+msgid "Default Page template"
+msgstr "Standard-Template für Seiten"
+
+msgid "Default Single Post template"
+msgstr "Standard-Template für Einzelbeiträge"
+
+msgid "Default behaviour"
+msgstr "Standardverhalten"
+
+msgid "Default message"
+msgstr "Standardnachricht"
+
+msgid "Disable dark mode by context"
+msgstr "Dunkelmodus nach Kontext deaktivieren"
+
+msgid "Disable dark mode for this entry"
+msgstr "Dunkelmodus für diesen Eintrag deaktivieren"
+
+msgid "Display"
+msgstr "Darstellung"
+
+msgid "Example button"
+msgstr "Beispielbutton"
+
+msgid "Example link"
+msgstr "Beispiellink"
+
+msgid "Hide the toggle"
+msgstr "Umschalter ausblenden"
+
+msgid "Include Auto option"
+msgstr "Option „Automatisch“ anzeigen"
+
+msgid "Leave empty to use the predefined global message."
+msgstr "Leer lassen, um die vordefinierte globale Nachricht zu verwenden."
+
+msgid "Let visitors choose Light, Dark or Auto appearance."
+msgstr "Ermöglicht die Auswahl zwischen heller, dunkler oder automatischer Darstellung."
+
+msgid "Light"
+msgstr "Hell"
+
+msgid "Live preview"
+msgstr "Live-Vorschau"
+
+msgid "Not found"
+msgstr "Nicht gefunden"
+
+msgid "Original colour"
+msgstr "Originalfarbe"
+
+msgid "Password-protected posts and pages"
+msgstr "Passwortgeschützte Beiträge und Seiten"
+
+msgid "Preview"
+msgstr "Vorschau"
+
+msgid "Search results"
+msgstr "Suchergebnisse"
+
+msgid "Select templates whose singular pages should always remain in light mode."
+msgstr "Wähle Templates aus, deren Einzelseiten immer im hellen Modus bleiben sollen."
+
+msgid "Show a disabled toggle and message"
+msgstr "Deaktivierten Umschalter und Nachricht anzeigen"
+
+msgid "Show an information message"
+msgstr "Hinweis anzeigen"
+
+msgid "Show text labels"
+msgstr "Textbeschriftungen anzeigen"
+
+msgid "Templates"
+msgstr "Templates"
+
+msgid "The original theme colour is shown beside the colour that replaces it in dark mode."
+msgstr "Die ursprüngliche Theme-Farbe wird neben der Farbe angezeigt, die sie im Dunkelmodus ersetzt."
+
+msgid "These contexts are forced to light mode and use the unavailable-state display chosen above."
+msgstr "Diese Kontexte werden in den hellen Modus gezwungen und verwenden die oben gewählte Anzeige für nicht verfügbare Zustände."
+
+msgid "This entry will always use the light appearance."
+msgstr "Dieser Eintrag verwendet immer die helle Darstellung."
+
+msgid "This preview uses the dark counterparts currently selected above."
+msgstr "Diese Vorschau verwendet die oben aktuell ausgewählten dunklen Gegenstücke."
+
+msgid "Unavailable-state display"
+msgstr "Anzeige bei Nichtverfügbarkeit"
+
+msgid "Use global default"
+msgstr "Globale Standardeinstellung verwenden"
+
+msgid "Used unless an individual post or page supplies its own text."
+msgstr "Wird verwendet, sofern ein einzelner Beitrag oder eine Seite keinen eigenen Text enthält."
+
+msgid "Visitors may use Light, Dark or Auto on this entry."
+msgstr "Besucherinnen und Besucher können für diesen Eintrag Hell, Dunkel oder Automatisch verwenden."
+
+msgid "When dark mode is unavailable"
+msgstr "Wenn der Dunkelmodus nicht verfügbar ist"
+
+msgid "WooCommerce checkout"
+msgstr "WooCommerce-Kasse"
+
+msgid "WordPress login pages"
+msgstr "WordPress-Anmeldeseiten"
+
+msgid "appearance"
+msgstr "Darstellung"
+
+msgid "dark mode"
+msgstr "Dunkelmodus"
+
+msgid "theme"
+msgstr "Theme"

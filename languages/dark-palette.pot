@@ -1,0 +1,191 @@
+msgid ""
+msgstr "Project-Id-Version: Dark Palette 1.1.0\\nReport-Msgid-Bugs-To: https://github.com/fabiohuwyler/dark-palette/issues\\nPOT-Creation-Date: 2026-07-14 00:00+0000\\nMIME-Version: 1.0\\nContent-Type: text/plain; charset=UTF-8\\nContent-Transfer-Encoding: 8bit\\nX-Domain: dark-palette\\n"
+
+msgid "404 pages"
+msgstr ""
+
+msgid "A page in dark mode"
+msgstr ""
+
+msgid "Accent 1"
+msgstr ""
+
+msgid "Accent 2"
+msgstr ""
+
+msgid "Accent 3"
+msgstr ""
+
+msgid "Accent 4"
+msgstr ""
+
+msgid "Accent 5"
+msgstr ""
+
+msgid "Accent 6"
+msgstr ""
+
+msgid "Accent colours"
+msgstr ""
+
+msgid "Accessible group label"
+msgstr ""
+
+msgid "All archive pages"
+msgstr ""
+
+msgid "Appearance"
+msgstr ""
+
+msgid "Appearance Toggle"
+msgstr ""
+
+msgid "Attachment template"
+msgstr ""
+
+msgid "Auto"
+msgstr ""
+
+msgid "Base"
+msgstr ""
+
+msgid "Changes appear here immediately. Save the settings when you are happy with the palette."
+msgstr ""
+
+msgid "Colour"
+msgstr ""
+
+msgid "Colour counterparts"
+msgstr ""
+
+msgid "Contrast"
+msgstr ""
+
+msgid "Custom message"
+msgstr ""
+
+msgid "Dark"
+msgstr ""
+
+msgid "Dark counterpart"
+msgstr ""
+
+msgid "Dark mode is not available on this page."
+msgstr ""
+
+msgid "Default Page template"
+msgstr ""
+
+msgid "Default Single Post template"
+msgstr ""
+
+msgid "Default behaviour"
+msgstr ""
+
+msgid "Default message"
+msgstr ""
+
+msgid "Disable dark mode by context"
+msgstr ""
+
+msgid "Disable dark mode for this entry"
+msgstr ""
+
+msgid "Display"
+msgstr ""
+
+msgid "Example button"
+msgstr ""
+
+msgid "Example link"
+msgstr ""
+
+msgid "Hide the toggle"
+msgstr ""
+
+msgid "Include Auto option"
+msgstr ""
+
+msgid "Leave empty to use the predefined global message."
+msgstr ""
+
+msgid "Let visitors choose Light, Dark or Auto appearance."
+msgstr ""
+
+msgid "Light"
+msgstr ""
+
+msgid "Live preview"
+msgstr ""
+
+msgid "Not found"
+msgstr ""
+
+msgid "Original colour"
+msgstr ""
+
+msgid "Password-protected posts and pages"
+msgstr ""
+
+msgid "Preview"
+msgstr ""
+
+msgid "Search results"
+msgstr ""
+
+msgid "Select templates whose singular pages should always remain in light mode."
+msgstr ""
+
+msgid "Show a disabled toggle and message"
+msgstr ""
+
+msgid "Show an information message"
+msgstr ""
+
+msgid "Show text labels"
+msgstr ""
+
+msgid "Templates"
+msgstr ""
+
+msgid "The original theme colour is shown beside the colour that replaces it in dark mode."
+msgstr ""
+
+msgid "These contexts are forced to light mode and use the unavailable-state display chosen above."
+msgstr ""
+
+msgid "This entry will always use the light appearance."
+msgstr ""
+
+msgid "This preview uses the dark counterparts currently selected above."
+msgstr ""
+
+msgid "Unavailable-state display"
+msgstr ""
+
+msgid "Use global default"
+msgstr ""
+
+msgid "Used unless an individual post or page supplies its own text."
+msgstr ""
+
+msgid "Visitors may use Light, Dark or Auto on this entry."
+msgstr ""
+
+msgid "When dark mode is unavailable"
+msgstr ""
+
+msgid "WooCommerce checkout"
+msgstr ""
+
+msgid "WordPress login pages"
+msgstr ""
+
+msgid "appearance"
+msgstr ""
+
+msgid "dark mode"
+msgstr ""
+
+msgid "theme"
+msgstr ""
